@@ -1,0 +1,89 @@
+/* ===============================
+   REGISTER PAGE ONLY
+   =============================== */
+
+.register-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("../images/office-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* register box */
+.register-container {
+    background: #ffffff;
+    width: 380px;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* heading */
+.register-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* inputs & select */
+.register-container input,
+.register-container select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* button */
+.register-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-container button:hover {
+    background: #e65c00;
+}
+
+/* message */
+.register-container p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
+}
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-link p {
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+.login-link button {
+    padding: 8px 20px;
+    background: #ff9800;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-link button:hover {
+    background: #ffc107;
+}

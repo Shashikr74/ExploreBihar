@@ -1,0 +1,52 @@
+.book-vehicle-page {
+    margin: 0;
+}
+
+/* Background */
+.book-vehicle-bg {
+    min-height: calc(100vh - 80px);
+    background: url("../images/office-bg.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Box */
+.book-vehicle-box {
+    background: rgba(255,255,255,0.95);
+    width: 400px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.book-vehicle-box h3 {
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.book-vehicle-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Button */
+.book-vehicle-box button {
+    width: 100%;
+    padding: 12px;
+    background: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.book-vehicle-box button:hover {
+    background: #e64a19;
+}

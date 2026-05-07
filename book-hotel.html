@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Book Hotel – Explore Bihar</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/book-hotel.css">
+</head>
+
+<body class="book-hotel-peg">
+<header>
+    <div class="header-container">
+        <h2>Book Hotel</h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<section class="book-hotel-bg">
+    <div class="book-hotel-box">
+        <h3>Hotel Booking Form</h3>
+        
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <input type="tel" id="mobile" placeholder="Mobile Number">
+
+        <select id="city">
+            <option value="">Choose City</option>
+            <option value="patna">Patna</option>
+            <option value="rajgir">Rajgir</option>
+            <option value="nalanda">Nalanda</option>
+            <option value="gaya">Gaya</option>
+            <option value="sasaram">Sasaram</option>
+        </select>
+
+        <input type="date" id="date">
+
+        <select id="travelers">
+            <option value="1">1 Traveler</option>
+            <option value="2">2 Travelers</option>
+            <option value="3">3 Travelers</option>
+            <option value="4">4+ Travelers</option>
+        </select>
+
+        <button onclick="bookHotel()">Submit Booking</button>
+
+    </div>
+</section>
+
+
+<script src="js/book-hotel.js"></script>
+
+</body>
+</html>
+
+

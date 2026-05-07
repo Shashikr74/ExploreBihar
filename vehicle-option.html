@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vehicle Options | Explore Bihar</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/common.css">
+
+<style>
+/* ===== BODY ===== */
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    height:100vh;
+    overflow:hidden;   /* 🔥 page scroll band */
+    background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("../images/pic.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ===== HEADER ===== */
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:70px;
+    background:#fff;
+    z-index:1000;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* ===== SCROLL AREA ===== */
+.main{
+    position:absolute;
+    top:70px;                     /* header ke niche */
+    left:0;
+    width:100%;
+    height:calc(100vh - 70px);    /* bacha hua area */
+    overflow-y:auto;              /* ✅ sirf yahi scroll */
+    padding:30px 0;
+}
+
+/* ===== DISTANCE ===== */
+.distance-box{
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    color:#fff;
+    margin-bottom:25px;
+}
+
+/* ===== VEHICLE CARD ===== */
+.vehicle-box{
+    max-width:750px;
+    margin:25px auto;
+    background:rgba(255,255,255,0.96);
+    padding:22px;
+    display:flex;
+    gap:20px;
+    border-radius:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.25);
+}
+
+.vehicle-box img{
+    width:120px;
+    height:150px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* ===== BUTTON ===== */
+.book-btn{
+    background:#ff5722;
+    color:#fff;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.book-btn:hover{
+    background:#e64a19;
+}
+.book-btn {
+    background: linear-gradient(135deg, #ff5722, #ff784e);
+    padding: 10px 18px;
+    font-weight: bold;
+}
+
+.book-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-container">
+        <h2>Explore Bihar</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<div class="main">
+
+    <div class="distance-box">
+        Distance: <span id="distanceValue">0 KM</span>
+    </div>
+
+    <!-- BIKE -->
+    <div class="vehicle-box">
+        <img src="images/bike.jpg">
+        <div>
+            <p><b>Vehicle:</b> Bike</p>
+            <p><b>Price:</b> ₹10 / KM</p>
+            <p><b>Capacity:</b> 1 Person</p>
+            <p><b>Rider Name:</b> Rajesh Kumar</p>
+            <p><b>Contact:</b> 9876543210</p>
+            <button class="book-btn" onclick="goToPayment('Bike')">Book Now</button>
+        </div>
+    </div>
+
+    <!-- CAR -->
+    <div class="vehicle-box">
+        <img src="images/car.jpg">
+        <div>
+            <p><b>Vehicle:</b> Car</p>
+            <p><b>Price:</b> ₹18 / KM</p>
+            <p><b>Capacity:</b> 4 Persons</p>
+            <p><b>Driver Name:</b> Suresh Singh</p>
+            <p><b>Contact:</b> 9876543211</p>
+            <button class="book-btn" onclick="goToPayment('Car')">Book Now</button>
+        </div>
+    </div>
+
+    <!-- BUS -->
+    <div class="vehicle-box">
+        <img src="images/bus.jpg">
+        <div>
+            <p><b>Vehicle:</b> Tourist Bus</p>
+            <p><b>Price:</b> ₹30 / KM</p>
+            <p><b>Capacity:</b> 20 Persons</p>
+            <p><b>Driver Name:</b> Ramesh Patel</p>
+            <p><b>Contact:</b> 9876543212</p>
+            <button class="book-btn" onclick="goToPayment('Bus')">Book Now</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+/* Distance show */
+const dist = localStorage.getItem("travelDistance");
+if(dist){
+    document.getElementById("distanceValue").innerText = dist;
+}
+
+/* Book Now → Payment */
+function goToPayment(vehicle){
+    localStorage.setItem("selectedVehicle", vehicle);
+    window.location.href = "payment.html";
+}
+</script>
+
+</body>
+</html>
+
+
+

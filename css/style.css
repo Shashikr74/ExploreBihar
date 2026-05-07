@@ -1,0 +1,309 @@
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ===== BASE ===== */
+body{
+    font-family: Arial, sans-serif;
+    background:#fff;   /* ✔ grey hata diya */
+    color:#333;
+    line-height:1.6;
+}
+
+
+/* ===== HEADER ===== */
+header{
+    background:
+        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+        url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;
+}
+
+
+
+
+.header-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+}
+
+.logo{
+    height:50px;
+}
+
+/* ===== NAV ===== */
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:bold;
+    color:#333;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ff6600;
+}
+
+/* ===== HERO ===== */
+.hero{
+    min-height: calc(100vh - 80px); /* header ke baad */
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("../images/hero.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+
+.hero-content{
+    text-align:center;
+    max-width:500px;
+}
+
+.hero-content h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+/* ===== BOOKING FORM ===== */
+.booking-form{ 
+    background: rgba(255,255,255,0.95); /* ✔ pure white nahi */
+    padding:30px;
+    border-radius:14px;
+    max-width:420px;
+    width:100%;
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+}
+
+
+
+.booking-form input,
+.booking-form select{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.booking-form button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    background:#ff6600;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+
+/* ===== CITY / ADMIN ===== */
+.city-info{
+    padding:40px;
+    text-align:center;
+}
+
+.hotel-card{
+    background:white;
+    padding:20px;
+    margin:15px auto;
+    max-width:500px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+/* ================= LOGIN PAGE ONLY ================= */
+
+.login-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+}
+
+.login-box{
+    background:#fff;
+    padding:30px 40px;
+    width:350px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.login-box input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+.login-box button{
+    width:100%;
+    padding:10px;
+    background:#ff9800;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:768px){
+    .header-container{
+        flex-direction:column;
+    }
+
+    nav{
+        margin-top:10px;
+    }
+
+    nav a{
+        margin:0 10px;
+    }
+
+    .hero-content h1{
+        font-size:32px;
+    }
+}
+/* ===== LOGIN PAGE ONLY ===== */
+
+.login-body{
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+    background:#fff;
+    padding:30px 40px;
+    width:350px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.login-box h2{
+    margin-bottom:20px;
+}
+
+.login-box input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+.login-box button{
+    width:100%;
+    padding:10px;
+    background:#ff9800;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.login-box button:hover{
+    background:#e68900;
+}
+
+.card {
+    width: 260px;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #555;
+    font-size: 14px;
+}
+.card-icon {
+    width: 50px;
+    margin-bottom: 12px;
+}
+.hotel-box{
+    background:#fff;
+    display:flex;
+    gap:20px;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:40px;   /* 🔥 gap fix */
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+.hotel-box button{
+    background:#ff5722;
+    color:#fff;
+    border:none;
+    padding:8px 16px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:14px;
+}
+.hotel-box button:hover{
+    background:#e64a19;
+}
+.dashboard-hero{
+    min-height: calc(100vh - 80px); /* header ke baad full screen */
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff; /* text image ke upar clear dikhe */
+    text-align: center;
+}
+.card{
+    background:#fff;
+    color:#333;
+}
+/* ===== BACKGROUND IMAGE FOR BOOK HOTEL PAGE ===== */
+
+
+
+
+
+
+
+

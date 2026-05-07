@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Payment</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/payment.css">
+
+</head>
+<body class="payment-page">
+
+<header>
+    <div class="header-container">
+        <h2>Payment</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<section class="payment-box">
+    <h3>Choose Payment Method</h3>
+
+    <button onclick="payWithUPI()">Pay with UPI</button>
+    <button class="book-btn">Pay with Card</button><br><br>
+    <button class="book-btn">Cash on Arrival</button>
+</section>
+<script>
+function payWithUPI(){
+    window.location.href = "upi-payment.html";
+}
+</script>
+<script>
+function logout(){
+    localStorage.removeItem("loggedInUser");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tour Guides</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/book-tour-guide.css">
+<style>
+.guides-container{
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.guide-card{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.guide-card img{
+    width: 120px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.guide-details p{
+    margin: 6px 0;
+}
+
+.book-btn{
+    margin-top: 10px;
+    padding: 8px 14px;
+    border: none;
+    background: #ff5722;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.tour-guide-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.35),
+            rgba(0,0,0,0.35)
+        ),
+        url("../images/pic.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.guide-card {
+    max-width: 750px;
+    margin: 25px auto;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(6px);
+    border-radius: 14px;
+    padding: 22px;
+}
+.guide-card img {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+.book-btn {
+    background: linear-gradient(135deg, #ff5722, #ff784e);
+    padding: 10px 18px;
+    font-weight: bold;
+}
+
+.book-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+
+</style>
+</head>
+
+<body class="tour-guide-page">
+
+    <header>
+    <div class="header-container">
+        <h2>Explore Bihar</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </nav>
+    </div>
+</header>
+
+
+<h2 style="text-align:center; color:#fff; margin-top:30px;">
+    Welcome! Choose Your Tour Guide
+</h2>
+
+
+<div class="guides-container">
+
+    <!-- MALE GUIDE -->
+    <div class="guide-card">
+        <img src="images/male-guide.jpg" alt="Male Guide">
+
+        <div class="guide-details">
+            <p><strong>Name:</strong> Ramesh Kumar</p>
+            <p><strong>Mobile:</strong> 9876543210</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Price:</strong> ₹1500 / day</p>
+            <button class="book-btn" onclick="openPayment()">Book Now</button>
+        </div>
+    </div>
+
+    <!-- FEMALE GUIDE -->
+    <div class="guide-card">
+        <img src="images/female-guide.jpg" alt="Female Guide">
+
+        <div class="guide-details">
+            <p><strong>Name:</strong> Neha Sharma</p>
+            <p><strong>Mobile:</strong> 9123456789</p>
+            <p><strong>Gender:</strong> Female</p>
+            <p><strong>Price:</strong> ₹1800 / day</p>
+           <button class="book-btn" onclick="openPayment()">Book Now</button>
+
+        </div>
+    </div>
+
+</div>
+     <script>
+      function openPayment(){
+      window.location.href = "payment.html";
+     }
+     </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1770671214056,
+    "username": "shashi kumar",
+    "country": "India",
+    "mobile": "9801637115",
+    "state": "Bihar",
+    "password": "98016"
+  },
+  {
+    "id": 1770672293766,
+    "username": "shani kumar",
+    "country": "India",
+    "mobile": "7970791670",
+    "state": "Bihar",
+    "password": "2007"
+  },
+  {
+    "id": 1770673461696,
+    "username": "shashi kumar",
+    "country": "India",
+    "mobile": "9122102530",
+    "state": "Bihar",
+    "password": "98016"
+  },
+  {
+    "id": 1770673520969,
+    "username": "shashi kumar",
+    "country": "India",
+    "mobile": "9801637116",
+    "state": "Bihar",
+    "password": "98016"
+  },
+  {
+    "id": 1770673965519,
+    "username": "shashi kumar",
+    "country": "India",
+    "mobile": "9801637118",
+    "state": "Bihar",
+    "password": "98016"
+  },
+  {
+    "id": 1778131654938,
+    "username": "Shashi Kumar",
+    "country": "India",
+    "mobile": "9126538471",
+    "state": "Bihar",
+    "password": "12345"
+  },
+  {
+    "id": 1778136988048,
+    "username": "jai shree ram",
+    "country": "India",
+    "mobile": "9100000001",
+    "state": "Bihar",
+    "password": "Ram"
+  },
+  {
+    "id": 1778137436219,
+    "username": "jai bajarang bali",
+    "country": "India",
+    "mobile": "9100000002",
+    "state": "Bihar",
+    "password": "Jai shree ram"
+  },
+  {
+    "id": 1778140740866,
+    "username": "Shashi Kumar",
+    "country": "India",
+    "mobile": "9801688632",
+    "state": "Bihar",
+    "password": "98016"
+  },
+  {
+    "id": 1778167132477,
+    "username": "Jai Shree Ram",
+    "country": "India",
+    "mobile": "9100000009",
+    "state": "Bihar",
+    "password": "Sita"
+  }
+]

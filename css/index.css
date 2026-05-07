@@ -1,0 +1,74 @@
+/* ===============================
+   INDEX PAGE CSS
+   (Only for index.html)
+================================ */
+
+/* ===== HERO SECTION ===== */
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== HERO CONTENT ===== */
+.hero-content {
+    background: rgba(255,255,255,0.9);
+    padding: 40px;
+    border-radius: 14px;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.hero-content p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* ===== HOME CARDS GRID ===== */
+.home-cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== CARD OVERRIDE (HOME) ===== */
+.home-cards .card {
+    width: 260px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.home-cards .card:hover {
+    transform: translateY(-6px);
+}
+
+/* ===== ICON INSIDE CARD ===== */
+.card-icon {
+    width: 60px;
+    margin-bottom: 12px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+}

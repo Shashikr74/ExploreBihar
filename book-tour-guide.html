@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Book Tour Guide</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/book-tour-guide.css">
+
+</head>
+<body class="book-guide-page">
+
+<header>
+    <div class="header-container">
+        <h2>Book Tour Guide</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<section class="book-guide-bg">
+
+    <div class="book-guide-box">
+        <h3>Tour Guide Booking</h3>
+
+        <form id="guideForm" onsubmit="openGuideList(event)">
+
+            <input type="text" placeholder="Your Name" required>
+            <input type="tel" placeholder="Mobile Number" required>
+
+            <select required>
+                <option value="">Choose City</option>
+                <option>Patna</option>
+                <option>Rajgir</option>
+                <option>Nalanda</option>
+                <option>Gaya</option>
+                <option>Sasaram</option>
+            </select>
+
+            <select required>
+                <option value="">Choose Language</option>
+                <option>Hindi</option>
+                <option>English</option>
+                <option>Hindi + English</option>
+            </select>
+
+            <label>Choose Date</label>
+            <input type="date" required>
+
+            <button type="submit">Submit Booking</button>
+
+        </form>
+    </div>
+
+</section>
+
+<script>
+function openGuideList(e){
+    e.preventDefault();
+    window.location.href = "tour-guides.html";
+}
+</script>
+
+</body>
+</html>
+

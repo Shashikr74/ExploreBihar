@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel – Explore Bihar</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/common.css">
+
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginBox" class="city-info">
+    <h2>🔐 Admin Login</h2>
+    <input type="password" id="adminPass" placeholder="Enter Admin Password">
+    <br><br>
+    <button onclick="login()">Login</button>
+    <p id="error" style="color:red;"></p>
+</div>
+
+<!-- DASHBOARD -->
+<div id="adminPanel" style="display:none;">
+
+<header>
+    <div class="header-container">
+        <h2>Admin Dashboard – Paid Bookings</h2>
+        <button onclick="logout()">Logout</button>
+    </div>
+</header>
+
+<section class="city-info">
+    <div id="stats" style="display:flex;gap:20px;justify-content:center;"></div>
+</section>
+
+<section class="city-info">
+    <div id="bookingList"></div>
+</section>
+
+</div>
+
+<script>
+const PASSWORD = "admin123";
+
+function login(){
+    if(document.getElementById("adminPass").value === PASSWORD){
+        loginBox.style.display = "none";
+        adminPanel.style.display = "block";
+        loadBookings();
+    } else {
+        error.innerText = "Wrong password!";
+    }
+}
+
+function logout(){
+    location.reload();
+}
+
+function loadBookings(){
+    const bookings = JSON.parse(localStorage.getItem("paidBookings")) || [];
+    const bookingList = document.getElementById("bookingList");
+    const stats = document.getElementById("stats");
+
+    bookingList.innerHTML = "";
+    stats.innerHTML = "";
+
+    stats.innerHTML = `
+        <div class="hotel-card">
+            <h3>Total Paid Bookings</h3>
+            <p style="font-size:22px;"><b>${bookings.length}</b></p>
+        </div>
+    `;
+
+    if(bookings.length === 0){
+        bookingList.innerHTML = "<p>No paid bookings found.</p>";
+        return;
+    }
+
+    bookings.forEach((b, i) => {
+        bookingList.innerHTML += `
+        <div class="hotel-card">
+            <h3>Booking #${i+1}</h3>
+            <p><b>Type:</b> ${b.type}</p>
+            <p><b>Name:</b> ${b.name}</p>
+            <p><b>Mobile:</b> ${b.mobile}</p>
+            ${b.city ? `<p><b>City:</b> ${b.city}</p>` : ""}
+            ${b.hotelName ? `<p><b>Hotel:</b> ${b.hotelName}</p>` : ""}
+            ${b.vehicle ? `<p><b>Vehicle:</b> ${b.vehicle}</p>` : ""}
+            <p><b>Price:</b> ₹${b.price}</p>
+            <p><b>Date:</b> ${b.date}</p>
+
+            <button style="background:red" onclick="deleteBooking(${i})">
+                Delete
+            </button>
+        </div>`;
+    });
+}
+
+function deleteBooking(i){
+    let bookings = JSON.parse(localStorage.getItem("paidBookings")) || [];
+    bookings.splice(i,1);
+    localStorage.setItem("paidBookings", JSON.stringify(bookings));
+    loadBookings();
+}
+</script>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,59 @@
+.book-guide-page {
+    margin: 0;
+}
+
+/* Background section */
+.book-guide-bg {
+    min-height: calc(100vh - 80px);
+    background: url("../images/office-bg.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Form box */
+.book-guide-box {
+    background: rgba(255,255,255,0.95);
+    width: 420px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.book-guide-box h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.book-guide-box input,
+.book-guide-box select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.book-guide-box label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Button */
+.book-guide-box button {
+    width: 100%;
+    padding: 12px;
+    background: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.book-guide-box button:hover {
+    background: #1976d2;
+}
+
